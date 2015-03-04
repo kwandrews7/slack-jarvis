@@ -1,16 +1,17 @@
 [
+  "hubot-business-cat",
   "hubot-diagnostics",
-  "hubot-help",
-  "hubot-heroku-keepalive",
+  "hubot-darts",
+  "hubot-fliptable",
   "hubot-google-images",
   "hubot-google-translate",
-  "hubot-pugme",
+  "hubot-help",
+  "hubot-heroku-keepalive",
   "hubot-maps",
+  "hubot-plusplus",
+  "hubot-pugme",
   "hubot-redis-brain",
   "hubot-rules",
   "hubot-shipit",
-  "hubot-youtube",
-  "hubot-plusplus",
-  "hubot-fliptable",
-  "hubot-darts"
+  "hubot-youtube"
 ]
