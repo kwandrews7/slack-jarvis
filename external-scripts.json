@@ -11,7 +11,7 @@
   "hubot-maps",
   "hubot-plusplus-userverify",
   "hubot-pugme",
-  "hubot-redis-brain",
+  "hubot-mongodb-brain",
   "hubot-rules",
   "hubot-shipit",
   "hubot-thesimpsons",
