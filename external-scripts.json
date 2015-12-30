@@ -10,6 +10,7 @@
   "hubot-help",
   "hubot-heroku-keepalive",
   "hubot-maps",
+  "hubot-pearson-dictionary",
   "hubot-plusplus-userverify",
   "hubot-pugme",
   "hubot-redis-brain",
