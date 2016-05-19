@@ -26,7 +26,6 @@
     "hubot-scripts": "^2.16.2",
     "hubot-shipit": "^0.2.0",
     "hubot-slack": "^3.4.2",
-    "hubot-slack-webhook": "^0.1.14",
     "hubot-thesimpsons": ">= 1.1.4",
     "hubot-whiteboardcleaner": "0.0.4",
     "hubot-youtube": "^1.0.1"
