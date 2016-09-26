@@ -10,7 +10,7 @@
     "hubot-codinglove": "0.2.6",
     "hubot-darts": "1.0.x",
     "hubot-diagnostics": "0.0.1",
-    "hubot-dobermanme": "0.0.1",
+    "hubot-dobermanme": "1.0.0",
     "hubot-fliptable": ">= 1.2.0",
     "hubot-google-images": "^0.2.6",
     "hubot-google-translate": "^0.2.0",
