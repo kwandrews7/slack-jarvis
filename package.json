@@ -17,7 +17,7 @@
     "hubot-hangman": "^1.3.0",
     "hubot-help": "^0.2.0",
     "hubot-heroku-keepalive": "1.0.3",
-    "hubot-maps": "0.0.2",
+    "hubot-maps": "0.0.3",
     "hubot-pearson-dictionary": "^1.0.0",
     "hubot-plusplus-userverify": "1.0.0",
     "hubot-poke": "^1.0.0",
