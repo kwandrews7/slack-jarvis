@@ -18,7 +18,7 @@
   "hubot-redis-brain",
   "hubot-rules",
   "hubot-shipit",
-  "hubot-stocks",
+  "hubot-stock-checker",
   "hubot-thesimpsons",
   "hubot-twitterstream",
   "hubot-whiteboardcleaner",
