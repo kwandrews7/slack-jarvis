@@ -7,7 +7,6 @@
   "dependencies": {
     "hubot": "^2.19.0",
     "hubot-bible-api": "^1.0.4",
-    "hubot-business-cat": "^1.5.14",
     "hubot-codinglove": "0.2.6",
     "hubot-darts": "1.0.x",
     "hubot-diagnostics": "0.0.2",
@@ -29,7 +28,6 @@
     "hubot-slack": "^4.4.0",
     "hubot-stock-checker": ">=1.0.3",
     "hubot-thesimpsons": ">=1.1.5",
-    "hubot-twitterstream": "^0.2.0",
     "hubot-whiteboardcleaner": "0.0.4",
     "hubot-youtube": "^1.1.0"
   },

@@ -1,5 +1,4 @@
 [
-  "hubot-business-cat",
   "hubot-bible-api",
   "hubot-codinglove",
   "hubot-diagnostics",
@@ -20,7 +19,6 @@
   "hubot-shipit",
   "hubot-stock-checker",
   "hubot-thesimpsons",
-  "hubot-twitterstream",
   "hubot-whiteboardcleaner",
   "hubot-youtube"
 ]
