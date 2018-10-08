@@ -1,6 +1,5 @@
 [
   "hubot-bible-api",
-  "hubot-codinglove",
   "hubot-diagnostics",
   "hubot-darts",
   "hubot-fliptable",
@@ -10,7 +9,6 @@
   "hubot-hangman",
   "hubot-help",
   "hubot-heroku-keepalive",
-  "hubot-maps",
   "hubot-pearson-dictionary",
   "hubot-plusplus-userverify",
   "hubot-pugme",
@@ -19,6 +17,5 @@
   "hubot-shipit",
   "hubot-stock-checker",
   "hubot-thesimpsons",
-  "hubot-whiteboardcleaner",
   "hubot-youtube"
 ]
