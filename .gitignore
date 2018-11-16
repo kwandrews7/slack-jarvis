@@ -1,4 +1,9 @@
 node_modules
+node_modules.nosync
 .DS_Store*
 .hubot_history
 .env
+.macstartup
+.winstartup
+.nixstartup
+

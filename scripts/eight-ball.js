@@ -1,4 +1,4 @@
-const hearRegex = /^(8ball|8-ball|8 ball|9ball|9-ball|9 ball)/i;
+const hearRegex = /^(8ball|8-ball|8 ball)/i;
 const responses = [
   'It is certain',
   'It is decidedly so',
@@ -18,28 +18,7 @@ const responses = [
   'My sources say no',
   'Outlook not so good',
   'Very doubtful',
-  'Good luck',
-  'I\'d give it 4,000 to 1 against',
-  'I predict winnings for people betting against',
-  'As If',
-  'Ask Me If I Care',
-  'Dumb Question Ask Another',
-  'Forget About It',
-  'Get A Clue',
-  'In Your Dreams',
-  'Not',
-  'Not A Chance',
-  'Obviously',
-  'Oh Please, Sure',
-  'That\'s Ridiculous',
-  'Well Maybe',
-  'What Do You Think?',
-  'Whatever',
-  'Who Cares?',
-  'Yeah And I\'m The Pope',
-  'Yeah Right',
-  'You Wish',
-  'You\'ve Got To Be Kidding...'
+  'Good luck'
 ];
 
 
