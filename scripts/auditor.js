@@ -1,5 +1,6 @@
 const Util = require("util");
 const MongoClient = require('mongodb').MongoClient;
+const ignoredRooms = ["G6RRY5L5B", "D03M55E30"];
 
 module.exports = function (robot) {
 
@@ -27,6 +28,10 @@ module.exports = function (robot) {
           "text": msg.message.text,
           "timestamp": Date.now()
         };
+        if (ignoredRooms.indexOf(savedMessage.room_id) > -1) {
+          robot.logger.info("Skipping messages from ignored room.");
+          return;
+        }
         collection.save(savedMessage, function (err, res) {
           if (err) {
             robot.logger.error("Auditor was unable to save message!");
