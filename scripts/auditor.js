@@ -1,6 +1,5 @@
 const Util = require("util");
 const MongoClient = require('mongodb').MongoClient;
-const ignoredRooms = ["G6RRY5L5B", "D03M55E30"];
 const roomMap = {
   "C0D2Z96AG": "hubot-testing",
   "C03AFTJHG": "general",
@@ -26,20 +25,21 @@ module.exports = function (robot) {
       let collection = db.collection('slack_messages');
 
       robot.hear(/^.*$/, function (msg) {
+        let room = msg.message.room;
+        if (room.startsWith('G') || room.startsWith('D')) {
+          robot.logger.info("Skipping messages from ignored room.");
+          return;
+        }
         let savedMessage = {
-          "room": roomMap[msg.message.room],
-          "room_id": msg.message.room,
+          "room": roomMap[room],
+          "room_id": room,
           "user": msg.message.user.name,
           "user_id": msg.message.user.id,
           "message_id": msg.message.id,
           "text": msg.message.text,
           "timestamp": Date.now()
         };
-        if (ignoredRooms.indexOf(savedMessage.room_id) > -1) {
-          robot.logger.info("Skipping messages from ignored room.");
-          return;
-        }
-        collection.save(savedMessage, function (err, res) {
+        collection.insertOne(savedMessage, function (err, res) {
           if (err) {
             robot.logger.error("Auditor was unable to save message!");
             robot.logger.error(err);
