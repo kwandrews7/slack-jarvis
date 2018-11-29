@@ -1,6 +1,13 @@
 const Util = require("util");
 const MongoClient = require('mongodb').MongoClient;
 const ignoredRooms = ["G6RRY5L5B", "D03M55E30"];
+const roomMap = {
+  "C0D2Z96AG": "hubot-testing",
+  "C03AFTJHG": "general",
+  "C4YTEUTJ6": "generaltsos",
+  "CCE6AE5GE": "investing",
+  "CEFH3HW1M": "whatsplaying"
+};
 
 module.exports = function (robot) {
 
@@ -20,8 +27,8 @@ module.exports = function (robot) {
 
       robot.hear(/^.*$/, function (msg) {
         let savedMessage = {
-          "room": msg.message.room,
-          "room_id": msg.message.rawMessage.channel,
+          "room": roomMap[msg.message.room],
+          "room_id": msg.message.room,
           "user": msg.message.user.name,
           "user_id": msg.message.user.id,
           "message_id": msg.message.id,
