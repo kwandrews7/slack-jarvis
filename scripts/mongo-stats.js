@@ -23,7 +23,7 @@ module.exports = function (robot) {
       let db = client.db(process.env.MONGODB_DBNAME);
       let collection = db.collection('slack_messages');
 
-      robot.respond(/give us the stats/, function (msg) {
+      robot.respond(/give us the stats/i, function (msg) {
         var content = {};
 
         let endTime = new Date();
@@ -78,17 +78,19 @@ function respondWithContent(robot, content) {
   if (robot && content && content.start &&
     content.end && content.messageCount &&
     content.roomCounts && content.userCounts) {
-    robot.send('*Last Week Messages Statistics*');
-    robot.send(`*Timeframe:* _${content.start} - ${content.end}_`);
-    robot.send(`*Total Message Count:* _${content.messageCount}_`);
-    robot.send(`*Stats by User:*`);
+    var response = [];
+    response.push('*Last Week Messages Statistics*');
+    response.push(`*Timeframe:* _${content.start} - ${content.end}_`);
+    response.push(`*Total Message Count:* _${content.messageCount}_`);
+    response.push(`*Stats by User:*`);
     content.userCounts.sort(compareAggregateResults).forEach(function(user, index) {
-      robot.send(`_${index+1}. ${user._id}: ${user.count} ${optionalMedal(index)}_`);
+      response.push(`_${index+1}. ${user._id}: ${user.count} ${optionalMedal(index)}_`);
     });
-    robot.send(`*Stats by Room:*`);
+    response.push(`*Stats by Room:*`);
     content.roomCounts.sort(compareAggregateResults).forEach(function(room, index) {
-      robot.send(`_${index+1}. ${room._id}: ${room.count} ${optionalMedal(index)}_`);
+      response.push(`_${index+1}. ${room._id}: ${room.count} ${optionalMedal(index)}_`);
     });
+    robot.send(response.join('\n'));
   }
 }
 
