@@ -23,7 +23,7 @@ module.exports = function (robot) {
       let db = client.db(process.env.MONGODB_DBNAME);
       let collection = db.collection('slack_messages');
 
-      robot.respond(/give us the stats/i, function (msg) {
+      robot.respond(/(give us the stats|what are the stats)/i, function (msg) {
         var content = {};
 
         let endTime = new Date();
