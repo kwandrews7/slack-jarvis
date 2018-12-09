@@ -4,6 +4,7 @@ const roomMap = {
   'C03AFTJHG': 'general',
   'C4YTEUTJ6': 'generaltsos',
   'CCE6AE5GE': 'investing',
+  'CBZU99HCL': 'prayers',
   'CEFH3HW1M': 'whatsplaying'
 };
 
