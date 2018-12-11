@@ -36,7 +36,7 @@ module.exports = function (robot) {
           'user': msg.message.user.name,
           'user_id': msg.message.user.id,
           'message_id': msg.message.id,
-          'text': msg.message.text,
+          'text': msg.message.rawText,
           'timestamp': Date.now()
         };
         collection.insertOne(savedMessage, function (err, res) {
