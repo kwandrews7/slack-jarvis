@@ -6,4 +6,5 @@ node_modules.nosync
 .macstartup
 .winstartup
 .nixstartup
+.mongoqueries
 
