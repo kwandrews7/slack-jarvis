@@ -30,6 +30,10 @@ module.exports = function (robot) {
           robot.logger.info('Skipping messages from ignored room.');
           return;
         }
+        if (!msg.message.user.id) {
+          robot.logger.debug('Skipping message with no user id. Likely a webhook posting.');
+          return;
+        }
         let savedMessage = {
           'room': roomMap[room],
           'room_id': room,
