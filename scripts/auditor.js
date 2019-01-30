@@ -24,7 +24,7 @@ module.exports = function (robot) {
       let db = client.db(process.env.MONGODB_DBNAME);
       let collection = db.collection('slack_messages');
 
-      robot.hear(/^.*$/, function (msg) {
+      robot.hear(/[\s\S]*/, function (msg) {
         let room = msg.message.room;
         if (room.startsWith('G') || room.startsWith('D')) {
           robot.logger.info('Skipping messages from ignored room.');
